@@ -1,18 +1,19 @@
 ---
+import Layout from "./Layout.astro";
 const { frontmatter } = Astro.props;
-
-import Header from "../components/header.astro";
-import Nav from "../components/Nav.astro";
-import Footer from "../components/footer.astro";
-import "../styles/style.css";
-const { pageTitle } = Astro.props;
 ---
-<Header />
-<Nav />
-<h1>{frontmatter.title}</h1>
-<p>{frontmatter.date.toString().slice(0,10)}</p>
-<p><em>{frontmatter.description}</em></p>
-<p>talk by: {frontmatter.speaker}</p>
-<slot />
 
-<Footer />
+<Layout>
+  <section>
+    <a href="/">Back</a>
+
+    <article>
+      <h1>{frontmatter.title}</h1>
+      <p>{frontmatter.intro}</p>
+    </article>
+
+
+  </section>
+
+  <slot />
+</Layout>

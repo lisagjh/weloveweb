@@ -1,9 +1,28 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "Home Page";
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+const allPosts = await Astro.glob("../pages/posts/*.md");
+const pageTitle = "My Astro Learning Blog";
+
+import "../styles/style.css";
 ---
-<BaseLayout pageTitle={pageTitle}>
 
+<Header />
+
+<main>
   
-
-</BaseLayout>
+  <h1>We Love Web Blog</h1>
+  
+  <Layout pageTitle={pageTitle}>
+    <ul>
+      {
+        allPosts.map((post) => (
+          <li>
+            <a class="post-link" href={post.url}>{post.frontmatter.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </Layout>
+  
+</main>

@@ -1,12 +1,11 @@
 ---
 layout: ../../layouts/post-layout.astro
-title: My Fourth Blog Post
-author: Astro Learner
-description: "This post will show up on its own!"
-image:
-    url: "https://docs.astro.build/default-og-image.png"
-    alt: "The word astro against an illustration of planets and stars."
-pubDate: 2022-08-08
+title: "Bug or Feature"
+speaker: "Gwen Bogaert"
+date: 26-04-2024
+description: "Is it a bug or a feature"
 tags: ["weloveweb", "talk", "coding"]
 ---
-This post should show up with my other blog posts, because `Astro.glob()` is returning a list of all my posts in order to create my list.
+
+Gwen gave a talk about bugs and features. She told as about her work as a creative developer at
+Antinomy Studio's, and showed us some cool cases she has worked on.

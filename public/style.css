@@ -1,0 +1,13 @@
+:root {
+    --black: #121212;
+    --white: #f7f6f6;
+    
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.post-link {
+    color: var(--black);
+}
